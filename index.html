@@ -47,11 +47,73 @@
         }
         
         .actions-section {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
             padding: 40px;
             background: #f8f9fa;
+        }
+        
+        .featured-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .featured-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.6);
+        }
+        
+        .featured-card h3 {
+            font-size: 2.2em;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .featured-card p {
+            font-size: 1.15em;
+            margin-bottom: 20px;
+            opacity: 0.95;
+        }
+        
+        .exemples-questions {
+            background: rgba(255,255,255,0.15);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .exemples-questions h4 {
+            font-size: 1.3em;
+            margin-bottom: 12px;
+        }
+        
+        .exemples-questions ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .exemples-questions li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+            font-size: 1.05em;
+        }
+        
+        .exemples-questions li:before {
+            content: "💡";
+            position: absolute;
+            left: 0;
+        }
+        
+        .action-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
         }
         
         .action-card {
@@ -78,7 +140,7 @@
         
         .action-card p {
             color: #555;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             font-size: 1.05em;
         }
         
@@ -93,11 +155,30 @@
             font-size: 1.1em;
             transition: all 0.3s;
             box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+            margin: 5px;
         }
         
         .cta-button:hover {
             transform: scale(1.05);
             box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+        
+        .cta-button-primary {
+            background: white;
+            color: #667eea;
+            font-size: 1.3em;
+            padding: 18px 40px;
+        }
+        
+        .cta-button-primary:hover {
+            background: #f0f0f0;
+        }
+        
+        .task-button {
+            background: linear-gradient(135deg, #48c6ef 0%, #6f86d6 100%);
+            padding: 10px 20px;
+            font-size: 0.95em;
+            margin-top: 10px;
         }
         
         .icon {
@@ -249,15 +330,16 @@
                 padding: 20px;
             }
             
+            .featured-card {
+                padding: 25px;
+            }
+            
             .org-box {
                 min-width: 100%;
             }
         }
     </style>
 </head>
-
-
-
 <body>
     <div class="container">
         <header>
@@ -267,37 +349,35 @@
         </header>
 
         <div class="actions-section">
-            <div class="action-card">
-                <h3>Assistant AI</h3>
-                <p>Je suis NOVA-MASTER, votre agent coordinateur intelligent dédié à la gestion du service de maintenance des installations techniques et des bâtiments (SITB) de l'Hôpital des Enfants. 🏥✨</p>
-	    <div class="exemples-questions">
-    <h3>Exemples de questions :</h3>
-    <ul>
-        <li>Donne-moi le MM de plomberie en cours !</li>
-        <li>BCM en cours, Numéros et CPS ?</li>
-        <li>Donne-moi le CPS du MT de la société OXAIR?</li>
-        <li>La date de début du MM électricité en cours?</li>
-        <li>Donne-moi le document demande de congé?</li>
-        <li>Donne-moi le document demande de renouvellement MM de plomberie, dernier?</li>
-
-    </ul>
-     </div>
-                <a href="https://t.me/Sbit004_bot" target="blank" class="cta-button">Consulter NOVA</a>
-  	   
+            <!-- Featured: Assistant AI -->
+            <div class="featured-card">
+                <h3>🤖 Assistant AI - NOVA-MASTER</h3>
+                <p>Votre agent coordinateur intelligent dédié à la gestion du service de maintenance des installations techniques et des bâtiments (SITB) de l'Hôpital des Enfants.</p>
+                
+                <div class="exemples-questions">
+                    <h4>💡 Exemples de questions :</h4>
+                    <ul>
+                        <li>Donne-moi le MM de plomberie en cours !</li>
+                        <li>BCM en cours, Numéros et CPS ?</li>
+                        <li>Donne-moi le CPS du MT de la société OXAIR ?</li>
+                        <li>La date de début du MM électricité en cours ?</li>
+                        <li>Donne-moi le document demande de congé ?</li>
+                        <li>Donne-moi le document demande de renouvellement MM de plomberie, dernier ?</li>
+                    </ul>
+                </div>
+                
+                <a href="https://t.me/Sbit004_bot" target="_blank" class="cta-button cta-button-primary">💬 Consulter NOVA-MASTER</a>
             </div>
 
-        <div class="actions-section">
-            <div class="actions-section">
-            <div class="action-card">
-                <h3><span class="icon">🔧</span> Nos formulaires</h3>
-                <p>Ces formulaires vont nous aider à collecter les données importantes dans notre service pour les exploiter par la suite. 🏥✨</p>
-                <p></p>
-     <a href="https://docs.google.com/forms/d/e/1FAIpQLSeNAIfvWO2ZqBTNUPayLPwnNVtiKN2HXIL5VxVNNzPUUN2jcw/viewform" target="_blank" class="cta-button">Ajouter une intervention</a>
-    <p></p>
-	    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeBuTpTpNR87sxeiC2EnF8yUyIEEAG01zRhLZL1A2y2m32Wtg/viewform" target="_blank" class="cta-button">Scanner un document</a>
+            <!-- Formulaires -->
+            <div class="action-card" style="max-width: 600px; margin: 0 auto;">
+                <h3><span class="icon">📝</span> Nos Formulaires</h3>
+                <p>Ces formulaires permettent de collecter les données importantes de notre service pour une meilleure exploitation.</p>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeNAIfvWO2ZqBTNUPayLPwnNVtiKN2HXIL5VxVNNzPUUN2jcw/viewform" target="_blank" class="cta-button">➕ Ajouter une intervention</a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeBuTpTpNR87sxeiC2EnF8yUyIEEAG01zRhLZL1A2y2m32Wtg/viewform" target="_blank" class="cta-button">📄 Scanner un document</a>
             </div>
-
-                    
+        </div>
+        
         <div class="organigramme-section">
             <h2>📊 Organigramme du Service SITB</h2>
             
@@ -361,8 +441,7 @@
                                 <div class="contact">📞 <a href="tel:0636321415">0636321415</a></div>
                                 <div class="contact">✉️ <a href="mailto:KHIYACH96@gmail.com">KHIYACH96@gmail.com</a></div>
                                 <div class="mission">Climatisation, CTA, chambres froides, chauffage et eau chaude sanitaire</div>
-                            <a href="https://docs.google.com/spreadsheets/d/1RYjI9pWIpYmjHcCryIFgGwHQ47P7jMYSfuL8Xy1ZJ4I/edit?usp=drivesdk" target="_blank" class="cta-button">Tâches</a>
-
+                                <a href="https://docs.google.com/spreadsheets/d/1RYjI9pWIpYmjHcCryIFgGwHQ47P7jMYSfuL8Xy1ZJ4I/edit?usp=drivesdk" target="_blank" class="cta-button task-button">📊 Tâches</a>
                             </div>
                             
                             <div class="member">
@@ -371,8 +450,7 @@
                                 <div class="contact">📞 <a href="tel:0667898428">0667898428</a> / <a href="tel:0607178780">0607178780</a></div>
                                 <div class="contact">✉️ <a href="mailto:benrabehayoub@gmail.com">benrabehayoub@gmail.com</a></div>
                                 <div class="mission">Plomberie, évacuations, puits, RIA, vidéosurveillance, banque de tissus et extincteurs</div>
-		         <a href="https://docs.google.com/spreadsheets/d/1aMRj_XEbIhUe8gmnPBIif2htsos9pahx9lhzZYT3afM/edit?usp=drivesdk" target="_blank" class="cta-button">Tâches</a>
-
+                                <a href="https://docs.google.com/spreadsheets/d/1aMRj_XEbIhUe8gmnPBIif2htsos9pahx9lhzZYT3afM/edit?usp=drivesdk" target="_blank" class="cta-button task-button">📊 Tâches</a>
                             </div>
                             
                             <div class="member">
@@ -381,8 +459,7 @@
                                 <div class="contact">📞 <a href="tel:0691457783">0691457783</a> / <a href="tel:0666304990">0666304990</a></div>
                                 <div class="contact">✉️ <a href="mailto:ayoubessaadi159@gmail.com">ayoubessaadi159@gmail.com</a></div>
                                 <div class="mission">Ascenseurs, bloc central, stérilisation, morgue et salles d'allogreffe</div>
-		         <a href="https://docs.google.com/spreadsheets/d/11F--edsB85xxMUN0y0Hrgx2hNU2t2CXmzOt7t8zlvT4/edit?usp=drivesdk" target="_blank" class="cta-button">Tâches</a>
-
+                                <a href="https://docs.google.com/spreadsheets/d/11F--edsB85xxMUN0y0Hrgx2hNU2t2CXmzOt7t8zlvT4/edit?usp=drivesdk" target="_blank" class="cta-button task-button">📊 Tâches</a>
                             </div>
                             
                             <div class="member">
@@ -398,8 +475,7 @@
                                 <div class="contact">📞 <a href="tel:0661289709">0661289709</a></div>
                                 <div class="contact">✉️ <a href="mailto:hezraidy@gmail.com">hezraidy@gmail.com</a></div>
                                 <div class="mission">Fluides médicaux, centrales d'oxygène, d'azote, distribution d'azote liquide et banque de tissu du CHOP</div>
-		        <a href="https://docs.google.com/spreadsheets/d/17dLMUrxL5uuNSO_mHJnJf3AaX9ts5cGNEyJlJouR22Q/edit?usp=drivesdk" target="_blank" class="cta-button">Tâches</a>
-
+                                <a href="https://docs.google.com/spreadsheets/d/17dLMUrxL5uuNSO_mHJnJf3AaX9ts5cGNEyJlJouR22Q/edit?usp=drivesdk" target="_blank" class="cta-button task-button">📊 Tâches</a>
                             </div>
                         </div>
                     </div>
@@ -418,8 +494,7 @@
                                 <div class="contact">📞 <a href="tel:0684670588">0684670588</a> / <a href="tel:0667796470">0667796470</a></div>
                                 <div class="contact">✉️ <a href="mailto:ayoub.siti.96@gmail.com">ayoub.siti.96@gmail.com</a></div>
                                 <div class="mission">Installations électriques CFO/CFA, groupes électrogènes, onduleurs</div>
-                                <a href="https://docs.google.com/spreadsheets/d/1J_sZkWr_It3OpfW6p-3eWj2uMJN7CLN9rUvGazY8DvU/edit?usp=drivesdk" target="_blank" class="cta-button">Tâches</a>
-
+                                <a href="https://docs.google.com/spreadsheets/d/1J_sZkWr_It3OpfW6p-3eWj2uMJN7CLN9rUvGazY8DvU/edit?usp=drivesdk" target="_blank" class="cta-button task-button">📊 Tâches</a>
                             </div>
                             
                             <div class="member">
@@ -428,8 +503,7 @@
                                 <div class="contact">📞 <a href="tel:0610962037">0610962037</a> / <a href="tel:0708181421">0708181421</a></div>
                                 <div class="contact">✉️ <a href="mailto:achraf.ikenssas@gmail.com">achraf.ikenssas@gmail.com</a></div>
                                 <div class="mission">Installations électriques CFO/CFA, groupes électrogènes, onduleurs</div>
-		         <a href="https://docs.google.com/spreadsheets/d/1L-82yvdtdIR_eUDwhk-7hTv8QQTY7WvBkyE53F7id9Y/edit?usp=drivesdk" target="_blank" class="cta-button">Tâches</a>
-
+                                <a href="https://docs.google.com/spreadsheets/d/1L-82yvdtdIR_eUDwhk-7hTv8QQTY7WvBkyE53F7id9Y/edit?usp=drivesdk" target="_blank" class="cta-button task-button">📊 Tâches</a>
                             </div>
                         </div>
                     </div>
